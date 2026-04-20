@@ -4,12 +4,16 @@ import com.hady.agendadortarefas.business.dto.TarefasDTO;
 import com.hady.agendadortarefas.infrastructure.entity.TarefasEntity;
 import org.mapstruct.Mapper;
 
-import javax.swing.*;
+import java.util.List;
 
 @Mapper(componentModel = "spring")
-public interface UsuarioConverter {
+public interface TarefaConverter {
     TarefasEntity paraTarefaEntity(TarefasDTO dto);
 
     TarefasDTO paraTarefaDTO(TarefasEntity entity);
+
+    List<TarefasEntity> paraListaTarefasEntity(List<TarefasDTO> dtos);
+
+    List<TarefasDTO> paraListaTarefasDTO(List<TarefasEntity>entities);
 
 }
