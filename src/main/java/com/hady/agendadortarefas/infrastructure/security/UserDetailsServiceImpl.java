@@ -20,6 +20,7 @@ public class UserDetailsServiceImpl  {
         return User
                 .withUsername(usuarioDTO.getEmail()) // Define o nome de usuário como o e-mail
                 .password(usuarioDTO.getSenha()) // Define a senha do usuário
+                .roles("USER")
                 .build();
 
     }
